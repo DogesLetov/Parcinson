@@ -1,8 +1,10 @@
 package com.example.some
 
 import android.content.Intent
+import android.media.Image
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -42,18 +44,18 @@ class NewsActivity : AppCompatActivity() {
         newsAdapter.notifyDataSetChanged()
 
         // Обработка переходов между окнами
-        val buttonNews: Button = findViewById(R.id.buttonNews)
+        val buttonNews: ImageButton = findViewById(R.id.buttonNews)
         buttonNews.setOnClickListener {
             // Остаёмся на текущем экране новостей
         }
 
-        val buttonChat: Button = findViewById(R.id.buttonChat)
+        val buttonChat: ImageButton = findViewById(R.id.buttonChat)
         buttonChat.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        val buttonUserInfo: Button = findViewById(R.id.buttonUserInfo)
+        val buttonUserInfo: ImageButton = findViewById(R.id.buttonUserInfo)
         buttonUserInfo.setOnClickListener {
             val intent = Intent(this, UserInfoActivity::class.java)
             startActivity(intent)

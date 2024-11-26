@@ -9,8 +9,10 @@
         android:id="@+id/messageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="5sp"
         android:text="Sample Message"
-        android:background="@color/purple"
+        android:textSize="18sp"
+        android:background="@color/blue"
         android:textColor="@color/white"
         />
 </LinearLayout>

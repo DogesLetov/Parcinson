@@ -38,7 +38,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Выбрать фото" />
+            android:text="Выбрать фото"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"/>
 
         <EditText
             android:id="@+id/editTextTextName"
@@ -89,7 +91,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Принять изменения" />
+            android:text="Принять изменения"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

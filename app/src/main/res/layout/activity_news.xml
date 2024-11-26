@@ -28,25 +28,31 @@
         app:layout_constraintTop_toTopOf="@+id/newsRecyclerView"
         app:layout_constraintVertical_bias="1.0">
 
-        <Button
+        <ImageButton
             android:id="@+id/buttonNews"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Новости" />
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            app:srcCompat="?attr/actionModePasteDrawable" />
 
-        <Button
+        <ImageButton
             android:id="@+id/buttonChat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Чат" />
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            app:srcCompat="@android:drawable/stat_notify_chat" />
 
-        <Button
+        <ImageButton
             android:id="@+id/buttonUserInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Пользователь" />
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            app:srcCompat="?attr/actionModeSelectAllDrawable" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

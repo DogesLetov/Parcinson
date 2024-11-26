@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Switch
 import android.widget.TextView
@@ -28,13 +29,12 @@ class UserInfoActivity : AppCompatActivity() {
     private var currentImageUri: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        sharedPreferences = getSharedPreferences("theme_prefs", MODE_PRIVATE)
+        val isDarkMode = sharedPreferences.getBoolean("dark_mode", false)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
         setContentView(R.layout.activity_user_info)
-
-        sharedPreferences = getSharedPreferences("theme_prefs", MODE_PRIVATE)
-        val isDarkMode = sharedPreferences.getBoolean("dark_mode", false)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -42,13 +42,13 @@ class UserInfoActivity : AppCompatActivity() {
             insets
         }
 
-        val buttonNews: Button = findViewById(R.id.buttonNews)
+        val buttonNews: ImageButton = findViewById(R.id.buttonNews)
         buttonNews.setOnClickListener {
             val intent = Intent(this, NewsActivity::class.java)
             startActivity(intent)
         }
 
-        val buttonChat: Button = findViewById(R.id.buttonChat)
+        val buttonChat: ImageButton = findViewById(R.id.buttonChat)
         buttonChat.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
